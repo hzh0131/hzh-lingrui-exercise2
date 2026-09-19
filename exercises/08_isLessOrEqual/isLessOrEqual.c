@@ -8,7 +8,14 @@
  *   Rating: 3
  */
 int isLessOrEqual(int x, int y) {
-#error TODO: Return 1 when x is less than or equal to y.
+//#error TODO: Return 1 when x is less than or equal to y.
+    //int mask=y+(~x+1);
+    //int a=1<<31;
+    return !((y+(~x+1))&(1<<31));
+
+
+    
+
 }
 
 int main(void) {

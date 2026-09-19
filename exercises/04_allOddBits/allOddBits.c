@@ -9,12 +9,16 @@
  *   Rating: 2
  */
 int allOddBits(int x) {
-#error TODO: Return 1 if every odd-numbered bit of x is set.
+//#error TODO: Return 1 if every odd-numbered bit of x is set.
+//int mask=0xAA;
+  
+return   !((~x) & ((((0xAA << 8) | 0xAA) << 16) | ((0xAA << 8) | 0xAA)));
+
 }
 
 int main(void) {
   int x;
-  if (scanf("%d", &x) != 1)
+  if (scanf("%x", &x) != 1)//%d不能输入16进制的数
     return 1;
   printf("%d\n", allOddBits(x));
   return 0;
